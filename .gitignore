@@ -1,0 +1,10 @@
+my-ng-seed.sublime*
+component/*
+!component/angular-1.1.4
+!component/bootstrap-2.3.2
+!component/jquery-1.9.1
+!component/require-2.1.6
+!component/modernizr-2.6.2
+node_modules
+public_*
+.swp

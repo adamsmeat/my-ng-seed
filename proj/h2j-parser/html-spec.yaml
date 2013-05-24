@@ -1,0 +1,49 @@
+# variables start with $ in keys
+$name: 'Paolo Umali'
+$a: 'A'
+$b: 'B'
+$singletonTags: ['area', 'base', 'br', 'col', 'command', 'embed', 'hr', 'img', 'input', 'link', 'meta']
+$priorities: ['\'', '"', '$', 'tags', '{}' ,'[]',',']
+# operations on vars
+$dev: 'dev'
+$domain: 'paoloumali.com'
+#concats their text values
+$dev+'@'+$domain: 'dev@paoloumali.com'
+# arrays, use : for keys, spaces = new lines
+['a','b']: '<ul><li>a</li><li>b</li></ul>'
+['a', 'b']: '<ul>
+<li>a</li>
+<li>b</li>
+</ul>'
+ul['a','b']: '<ul><li>a</li><li>b</li></ul>'
+ol['a','b']: '<ol><li>a</li><li>b</li></ol>'
+dl['a:letter a','b:letter b']: '<dl><dt>a</dt><dd>letter a</dd><dt>b</dt><dd>letter b</dd></dl>'
+# interpolated
+dl["a:letter $a", "b:letter $b"]: '<dl>
+<dt>a</dt><dd>letter A</dd>
+<dt>b</dt><dd>letter B</dd>
+</dl>'
+
+
+#assign text nodes
+h1:'Use quotes. They should have no.1 priority'
+h1='Use quotes. They should have no.1 priority'
+h1="Use quotes. They should have no.1 priority"
+
+p#id='value': '<p id="id">value</p>'
+class: '.: element class'
+value: '= Use for text. Use " for interpolated value.'
+comments: '; lines starting with semi-colon are comments'
+div#my-id.my-class: '<div id="my-id" class="my-class"></div>'
+.my-class#my-id1: '<div id="my-id1" class="my-class"></div>'
+div#my-id2: '<div id="my-id2" class="my-class"></div>'
+span='not-interpolated $var': '<span>not-interpolated $var</div>'
+span="interpolated $var": '<span>interpolated varsValue</div>'
+span="interpolated $var": '<span>interpolated varsValue</div>'
+
+attributes: {att1: 'attribute1', att2: 'attibute2'}
+shortAtts: [checked, ngController: 'UserCtrl']
+interpolation: "This backslash in \$var will escape the $, therefore, will not interpolate that variable. Unlike in here: $var"
+
+
+# parsing notes

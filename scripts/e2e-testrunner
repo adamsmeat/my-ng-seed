@@ -1,0 +1,9 @@
+#!/bin/bash
+
+SCRIPTPATH="$(pwd)/${BASH_SOURCE[0]}"
+SCRIPTDIR="$(dirname $SCRIPTPATH)"
+cd "$SCRIPTDIR/../"
+echo "-------------------------------------------------------------------"
+echo "Started e2e tests using karma."
+echo "-------------------------------------------------------------------"
+karma start $SCRIPTDIR/../tests/e2e-karma.conf.js $*

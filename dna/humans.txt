@@ -1,0 +1,15 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    Paolo Umali -- Developer -- @adamsmeat
+
+# THANKS
+
+    Sponsors go here
+
+# TECHNOLOGY COLOPHON
+
+    HTML5, CSS3
+    Bootstrap, jQuery, Modernizr, AngularJS, RequireJS
